@@ -92,15 +92,15 @@ interface ChatWindowProps {
 }
 
 const getApiBaseUrl = () => {
-  const envUrl = process.env.REACT_APP_API_BASE_URL;
-  if (envUrl) {
-    if (envUrl.endsWith('/api')) {
-      return envUrl.substring(0, envUrl.length - 4);
+  const chatUrl = process.env.REACT_APP_CHAT_API_URL;
+  if (chatUrl) {
+    if (chatUrl.endsWith('/api')) {
+      return chatUrl.substring(0, chatUrl.length - 4);
     }
-    if (envUrl.endsWith('/api/')) {
-      return envUrl.substring(0, envUrl.length - 5);
+    if (chatUrl.endsWith('/api/')) {
+      return chatUrl.substring(0, chatUrl.length - 5);
     }
-    return envUrl;
+    return chatUrl;
   }
   return 'http://localhost:8000';
 };
