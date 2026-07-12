@@ -55,7 +55,7 @@ import { AIChatService } from './utils/aiChat.service';
     MonitoringModule,
     ReefCheckSitesModule,
     ReefCheckSurveysModule,
-    AiChatLog,
+    TypeOrmModule.forFeature([AiChatLog]),
   ],
   controllers: [AppController, AiChatController],
   providers: [EntityExists, TimeSeriesAIService, AIChatService],
