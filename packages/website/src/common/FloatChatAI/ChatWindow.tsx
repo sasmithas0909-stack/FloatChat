@@ -91,7 +91,21 @@ interface ChatWindowProps {
   toggleDarkMode: () => void;
 }
 
-const API_BASE_URL = 'http://localhost:8000';
+const getApiBaseUrl = () => {
+  const envUrl = process.env.REACT_APP_API_BASE_URL;
+  if (envUrl) {
+    if (envUrl.endsWith('/api')) {
+      return envUrl.substring(0, envUrl.length - 4);
+    }
+    if (envUrl.endsWith('/api/')) {
+      return envUrl.substring(0, envUrl.length - 5);
+    }
+    return envUrl;
+  }
+  return 'http://localhost:8000';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 const SUGGESTED_QUESTIONS = [
   "Today's ocean summary",
@@ -642,7 +656,7 @@ export default function ChatWindow({ onClose, darkMode, toggleDarkMode }: ChatWi
         {
           id: `err-${Date.now()}`,
           sender: 'assistant',
-          text: "⚠️ **Error**: Failed to connect to the backend server. Make sure the FastAPI backend is running on `http://localhost:8000`."
+          text: `⚠️ **Error**: Failed to connect to the backend server. Make sure the FastAPI backend is running on \`${API_BASE_URL}/api/chat\`.`
         }
       ]);
     } finally {
