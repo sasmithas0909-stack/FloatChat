@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Buoy > should render with given state from Redux store 1`] = `
+<div>
+  <mock-navbar
+    searchlocation="false"
+  />
+  <div
+    class="Buoy-root-2"
+    id="bloc-6"
+  >
+    <div
+      class="container bloc-md"
+    >
+      <div
+        class="row align-items-center"
+      >
+        <div
+          class="lcolpad col-12 col"
+        >
+          <mock-typography
+            classname="Buoy-title-1"
+            variant="h4"
+          >
+            The Aqualink Buoy
+          </mock-typography>
+          <p
+            class="text-lg-left"
+          >
+            Current global ocean temperature monitoring systems are restricted to satellite-derived surface temperatures, which only capture the skin temperature of the water. The temperatures at greater depths, where coral sites can be found, are mostly unknown. Scientists will study those temperatures by installing local data loggers, which have to be physically retrieved from the site to have their data accessed. Once the loggers have been retrieved the findings will be published in a paper, but it’s rare to get continuous real-time readings of those temperatures. The monitoring system we are deploying includes a solar-powered smart buoy that relays temperature information in real-time, giving us some of the needed data to detect coral bleaching events early and put response plans in place.
+            <br />
+          </p>
+        </div>
+        <div
+          class="col-lg-12 offset-lg-0"
+        >
+          <img
+            alt="bouydiagram2"
+            class="img-fluid mg-lg mx-auto d-block img-responsive diagram lazyload"
+            src="/src/assets/img/fulldiag3_1.svg"
+          />
+        </div>
+      </div>
+      <div
+        class="row voffset-lg"
+      >
+        <div
+          class="col-lg-12"
+        >
+          <p
+            class="text-lg-left"
+          >
+            <br />
+            The real-time temperature information is transmitted to our servers where a monitoring system combines that data with survey imagery to help understand the cause-and-effect of increasing temperatures on the local marine ecosystem. We are working with coral scientists to create easy-to-use instruction manuals for conducting site surveys and implementing response plans, all of which will be facilitated through our monitoring system.
+            <br />
+          </p>
+        </div>
+        <div
+          class="col-lg-12"
+        >
+          <img
+            alt="Asset%204"
+            class="img-fluid mx-auto d-block img-responsive diagram lazyload"
+            src="/src/assets/img/fulldiag3.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <mock-footer />
+</div>
+`;

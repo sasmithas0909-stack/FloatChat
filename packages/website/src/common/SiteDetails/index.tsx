@@ -1,0 +1,538 @@
+import React, { useEffect, useState } from 'react';
+import { Grid, Theme, Box, useTheme, useMediaQuery } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import classNames from 'classnames';
+import times from 'lodash/times';
+
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'store/hooks';
+import { oceanSenseConfig } from 'constants/oceanSenseConfig';
+import type {
+  Site,
+  LatestDataASSofarValue,
+  DataRange,
+  Sources,
+  TimeSeriesDataRange,
+} from 'store/Sites/types';
+import { SurveyListItem, SurveyPoint } from 'store/Survey/types';
+import {
+  forecastDataRequest,
+  forecastDataSelector,
+  latestDataRequest,
+  latestDataSelector,
+  siteDetailsSelector,
+  siteTimeSeriesDataRangeSelector,
+  spotterPositionRequest,
+  spotterPositionSelector,
+  unsetForecastData,
+  unsetLatestData,
+  unsetSpotterPosition,
+} from 'store/Sites/selectedSiteSlice';
+import { parseLatestData } from 'store/Sites/helpers';
+import { getMiddlePoint } from 'helpers/map';
+import { formatNumber } from 'helpers/numberUtils';
+import { displayTimeInLocalTimezone } from 'helpers/dates';
+import { DateTime, Interval } from 'luxon';
+import Map from './Map';
+import SketchFab from './SketchFab';
+import FeaturedMedia from './FeaturedMedia';
+import Satellite from './Satellite';
+import Sensor from './Sensor';
+import CoralBleaching from './CoralBleaching';
+import Waves from './Waves';
+import OceanSenseMetrics from './OceanSenseMetrics';
+import Surveys from './Surveys';
+import CardWithTitle from './CardWithTitle';
+import { Value } from './CardWithTitle/types';
+import CombinedCharts from '../Chart/CombinedCharts';
+import WaterSamplingCard from './WaterSampling';
+import SeapHOxCard from './SeapHOx';
+import { styles as incomingStyles } from './styles';
+import LoadingSkeleton from '../LoadingSkeleton';
+import playIcon from '../../assets/play-icon.svg';
+import { TemperatureChange } from './TemperatureChange';
+import { ReefCheckDataIndicator } from './ReefCheckDataIndicator';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    ...incomingStyles,
+    root: {
+      marginTop: '2rem',
+    },
+    forcedWidth: {
+      width: `calc(100% + ${theme.spacing(2)})`,
+    },
+    mobileMargin: {
+      [theme.breakpoints.down('md')]: {
+        margin: theme.spacing(1, 0),
+      },
+    },
+    metricsWrapper: {
+      marginTop: '1rem',
+    },
+  }),
+);
+
+/**  Show only the last year of HUI data, should match with {@link getCardData} */
+const acceptHUIInterval = Interval.fromDateTimes(
+  DateTime.now().minus({ years: 1 }),
+  DateTime.now(),
+);
+
+function dateRangeWithinInterval(
+  interval: Interval,
+  dataRange: DataRange[],
+): boolean {
+  // eslint-disable-next-line fp/no-mutation
+  for (let index = 0; index < dataRange.length; index += 1) {
+    if (interval.contains(DateTime.fromISO(dataRange[index].maxDate))) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function sourceWithinDataRangeInterval(
+  interval: Interval,
+  source: Sources,
+  dataRanges?: TimeSeriesDataRange,
+) {
+  if (!dataRanges) return false;
+
+  const ranges = Object.entries(dataRanges);
+  // eslint-disable-next-line fp/no-mutation
+  for (let index = 0; index < ranges.length; index += 1) {
+    if (
+      ranges[index][1].find(
+        (x) => x.type === source && dateRangeWithinInterval(interval, x.data),
+      )
+    ) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+const sondeMetrics: (keyof LatestDataASSofarValue)[] = [
+  'odoConcentration',
+  'cholorophyllConcentration',
+  'ph',
+  'salinity',
+  'turbidity',
+];
+
+const MINIMUM_SONDE_METRICS_TO_SHOW_CARD = 3;
+
+function SiteDetails({
+  site,
+  selectedSurveyPointId,
+  surveys,
+  featuredSurveyId = null,
+  featuredSurveyPoint = null,
+  surveyDiveDate = null,
+}: SiteDetailsProps) {
+  const classes = useStyles();
+  const theme = useTheme();
+  const dispatch = useAppDispatch();
+  const spotterPosition = useSelector(spotterPositionSelector);
+  const [latestDataAsSofarValues, setLatestDataAsSofarValues] =
+    useState<LatestDataASSofarValue>({});
+  const [hasSondeData, setHasSondeData] = useState<boolean>(false);
+  const [hasSpotterData, setHasSpotterData] = useState<boolean>(false);
+  const [hasSpotterWindWaveData, setHasSpotterWindWaveData] =
+    useState<boolean>(false);
+  const [hasHUIData, setHasHUIData] = useState<boolean>(false);
+  const [hasSeapHOxData, setHasSeapHOxData] = useState<boolean>(false);
+  const latestData = useSelector(latestDataSelector);
+  const forecastData = useSelector(forecastDataSelector);
+  const timeSeriesRange = useSelector(siteTimeSeriesDataRangeSelector);
+  const siteDetails = useSelector(siteDetailsSelector);
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [lng, lat] = site?.polygon ? getMiddlePoint(site.polygon) : [];
+  const isLoading = !site;
+
+  useEffect(() => {
+    if (site && !spotterPosition) {
+      dispatch(spotterPositionRequest(String(site.id)));
+    }
+    if (site && !latestData) {
+      dispatch(latestDataRequest(String(site.id)));
+    }
+    if (site && !forecastData) {
+      dispatch(forecastDataRequest(String(site.id)));
+    }
+  }, [dispatch, site, spotterPosition, latestData, forecastData]);
+
+  useEffect(
+    () => () => {
+      dispatch(unsetSpotterPosition());
+      dispatch(unsetLatestData());
+      dispatch(unsetForecastData());
+    },
+    [dispatch],
+  );
+
+  useEffect(() => {
+    if (forecastData && latestData) {
+      const combinedArray = [...forecastData, ...latestData];
+      const parsedData = parseLatestData(combinedArray);
+
+      // Check for Spotter TEMPERATURE data (for BUOY OBSERVATION card)
+      // Excludes seaphox source AND checks if data is recent (within 12 hours)
+      const spotterValidityLimit = 12 * 60 * 60 * 1000; // 12 hours in milliseconds
+      const now = Date.now();
+
+      const hasRecentSpotterTemperature = latestData.some((x) => {
+        if (x.source === 'seaphox') return false;
+
+        const isTemperatureMetric =
+          x.metric === 'bottom_temperature' ||
+          x.metric === 'top_temperature' ||
+          x.metric === 'surface_temperature';
+
+        if (!isTemperatureMetric) return false;
+
+        const dataAge = now - new Date(x.timestamp).getTime();
+        return dataAge < spotterValidityLimit;
+      });
+
+      const hasSpotterTemperature = Boolean(
+        hasRecentSpotterTemperature ||
+        (parsedData.topTemperature &&
+          parsedData.topTemperature.timestamp &&
+          now - new Date(parsedData.topTemperature.timestamp).getTime() <
+            spotterValidityLimit) ||
+        (parsedData.surfaceTemperature &&
+          parsedData.surfaceTemperature.timestamp &&
+          now - new Date(parsedData.surfaceTemperature.timestamp).getTime() <
+            spotterValidityLimit),
+      );
+
+      // Check for Spotter WIND/WAVE data (for Waves component LIVE indicator)
+      // Includes all sources except GFS model data
+      const hasSpotterWindWave = Boolean(
+        latestData.some(
+          (x) =>
+            x.source !== 'gfs' &&
+            (x.metric === 'wind_speed' ||
+              x.metric === 'wind_direction' ||
+              x.metric === 'significant_wave_height' ||
+              x.metric === 'wave_mean_direction' ||
+              x.metric === 'wave_mean_period'),
+        ),
+      );
+
+      const hasSonde =
+        sondeMetrics.filter((x) => Boolean(parsedData[x])).length >=
+        MINIMUM_SONDE_METRICS_TO_SHOW_CARD;
+
+      const hasHUI =
+        latestData.some(
+          (x) =>
+            x.source === 'hui' &&
+            acceptHUIInterval.contains(DateTime.fromISO(x.timestamp)),
+        ) ||
+        sourceWithinDataRangeInterval(
+          acceptHUIInterval,
+          'hui',
+          timeSeriesRange,
+        );
+
+      setHasSondeData(hasSonde);
+      setHasSpotterData(hasSpotterTemperature);
+      setHasSpotterWindWaveData(hasSpotterWindWave);
+      setHasHUIData(hasHUI);
+
+      const seapHOxInterval = Interval.fromDateTimes(
+        DateTime.now().minus({ days: 7 }), // Only show if data within last 7 days
+        DateTime.now(),
+      );
+
+      // Check if there's seaphox data in latestData (any timestamp) or in timeSeriesRange
+      const hasSeapHOxInLatestData = latestData.some(
+        (x) =>
+          x.source === 'seaphox' &&
+          (x.metric === 'bottom_temperature' ||
+            x.metric === 'ph' ||
+            x.metric === 'salinity' ||
+            x.metric === 'conductivity' ||
+            x.metric === 'pressure' ||
+            x.metric === 'dissolved_oxygen'),
+      );
+
+      const hasSeapHOxInRange = sourceWithinDataRangeInterval(
+        seapHOxInterval,
+        'seaphox',
+        timeSeriesRange,
+      );
+
+      const hasSeapHOx = Boolean(
+        (parsedData.bottomTemperature ||
+          parsedData.ph ||
+          parsedData.salinity ||
+          parsedData.dissolvedOxygen ||
+          parsedData.pressure ||
+          parsedData.conductivity) &&
+        (hasSeapHOxInLatestData || hasSeapHOxInRange),
+      );
+      setHasSeapHOxData(hasSeapHOx);
+      setLatestDataAsSofarValues(parsedData);
+    }
+  }, [forecastData, latestData, timeSeriesRange]);
+
+  const { videoStream } = site || {};
+
+  const cards =
+    site && latestDataAsSofarValues
+      ? [
+          // CARD 1: Satellite (always shown)
+          <Satellite
+            data={latestDataAsSofarValues}
+            maxMonthlyMean={site.maxMonthlyMean}
+          />,
+
+          // CARD 2: Sensor/CoralBleaching/TemperatureChange (conditional)
+          (() => {
+            if (
+              (hasHUIData || hasSondeData || hasSeapHOxData) &&
+              !hasSpotterData
+            ) {
+              return <CoralBleaching data={latestDataAsSofarValues} />;
+            }
+
+            if (!hasSpotterData) {
+              return (
+                <TemperatureChange dailyData={siteDetails?.dailyData ?? []} />
+              );
+            }
+
+            return (
+              <Sensor
+                depth={site.depth}
+                id={site.id}
+                data={latestDataAsSofarValues}
+              />
+            );
+          })(),
+
+          // CARD 3: SeapHOx (priority) or WaterSampling/CoralBleaching (fallback)
+          (() => {
+            if (hasSeapHOxData) {
+              return (
+                <SeapHOxCard
+                  depth={site.depth}
+                  data={latestDataAsSofarValues}
+                />
+              );
+            }
+
+            // FALLBACK: Original Card 3 logic
+            if (hasHUIData) {
+              return (
+                <WaterSamplingCard siteId={site.id.toString()} source="hui" />
+              );
+            }
+            if (hasSondeData) {
+              return (
+                <WaterSamplingCard siteId={site.id.toString()} source="sonde" />
+              );
+            }
+            return <CoralBleaching data={latestDataAsSofarValues} />;
+          })(),
+
+          // CARD 4: Waves (always shown)
+          <Waves
+            data={latestDataAsSofarValues}
+            hasSpotter={hasSpotterWindWaveData}
+          />,
+        ]
+      : times(4, () => null);
+
+  const mapTitleItems: Value[] = [
+    {
+      text: `LAT: ${formatNumber(lat, 3)}`,
+      variant: 'subtitle2',
+      marginRight: '1rem',
+    },
+    {
+      text: `LONG: ${formatNumber(lng, 3)}`,
+      variant: 'subtitle2',
+      marginRight: site?.sketchFab ? '1rem' : 0,
+    },
+  ];
+
+  const featuredMediaTitleItems = (): Value[] => {
+    switch (true) {
+      case !!videoStream:
+        return [
+          {
+            text: 'LIVE VIDEO',
+            marginRight: 0,
+            variant: 'h6',
+          },
+        ];
+      case !!surveyDiveDate && !!featuredSurveyPoint:
+        return [
+          {
+            text: 'SURVEY POINT:',
+            variant: 'h6',
+            marginRight: '0.5rem',
+          },
+          {
+            text: `${featuredSurveyPoint?.name}`,
+            variant: 'subtitle2',
+            marginRight: '2rem',
+            overflowEllipsis: true,
+          },
+          {
+            text: `${displayTimeInLocalTimezone({
+              isoDate: surveyDiveDate,
+              format: 'MMM dd, yyyy',
+              displayTimezone: false,
+              timeZone: site?.timezone,
+            })}`,
+            variant: 'subtitle2',
+            marginRight: 0,
+          },
+        ];
+      case !!site?.sketchFab?.description: {
+        return [
+          {
+            text: site?.sketchFab?.description ?? '',
+            variant: 'subtitle2',
+            marginRight: 0,
+          },
+        ];
+      }
+      default:
+        return [];
+    }
+  };
+  const showFeatureMediaCard =
+    isLoading || !!featuredSurveyId || !!site?.sketchFab?.uuid || !!videoStream;
+
+  return (
+    <Box mt="1.5rem">
+      <Grid
+        direction={isMobile ? 'column-reverse' : 'row'}
+        container
+        justifyContent="space-between"
+        alignItems="flex-end"
+        spacing={2}
+        className={classNames({
+          [classes.forcedWidth]: !!videoStream,
+        })}
+      >
+        <CardWithTitle
+          loading={isLoading}
+          className={classNames({
+            [classes.mobileMargin]: !!videoStream,
+          })}
+          titleItems={mapTitleItems}
+          rightHeaderItem={
+            !showFeatureMediaCard &&
+            site && <ReefCheckDataIndicator siteId={site?.id} />
+          }
+          gridProps={{ xs: 12, md: showFeatureMediaCard ? 6 : 12 }}
+          forcedAspectRatio={!!videoStream}
+        >
+          {site && (
+            <Map
+              siteId={site.id}
+              spotterPosition={
+                hasSpotterData ? spotterPosition?.position : null
+              }
+              polygon={site.polygon}
+              surveyPoints={site.surveyPoints}
+            />
+          )}
+        </CardWithTitle>
+
+        {showFeatureMediaCard && (
+          <CardWithTitle
+            loading={isLoading}
+            className={classNames({
+              [classes.mobileMargin]: !!videoStream,
+            })}
+            titleItems={featuredMediaTitleItems()}
+            rightHeaderItem={
+              showFeatureMediaCard &&
+              site && <ReefCheckDataIndicator siteId={site?.id} />
+            }
+            gridProps={{ xs: 12, md: 6 }}
+            forcedAspectRatio={!!videoStream}
+            loadingImage={playIcon}
+          >
+            {/* video first, then 3d model, then image */}
+            {site && !videoStream && site.sketchFab?.uuid && (
+              <SketchFab uuid={site.sketchFab.uuid} />
+            )}
+            {site && (videoStream || !site.sketchFab?.uuid) && (
+              <FeaturedMedia
+                siteId={site.id}
+                url={videoStream}
+                featuredImage={site.featuredImage}
+                surveyId={featuredSurveyId}
+              />
+            )}
+          </CardWithTitle>
+        )}
+      </Grid>
+
+      <Grid
+        className={classes.metricsWrapper}
+        container
+        justifyContent="space-between"
+        spacing={2}
+      >
+        {cards.map((Component, index) => (
+          <Grid key={`card-${index.toString()}`} item xs={12} sm={6} md={3}>
+            <div className={classes.card}>
+              <LoadingSkeleton
+                variant="rectangular"
+                height="100%"
+                loading={isLoading}
+              >
+                {Component}
+              </LoadingSkeleton>
+            </div>
+          </Grid>
+        ))}
+      </Grid>
+
+      {site && oceanSenseConfig?.[site.id] && <OceanSenseMetrics />}
+
+      <Box mt="2rem">
+        <CombinedCharts
+          site={site}
+          selectedSurveyPointId={selectedSurveyPointId}
+          surveys={surveys}
+          hasAdditionalSensorData={hasHUIData || hasSondeData}
+        />
+        {site?.iframe && (
+          <iframe
+            style={{ width: '100%', height: '50vh' }}
+            src={site.iframe}
+            title="external-content"
+            // TODO: update constraints when we actually have the content that will appear here
+            // sandbox=""
+          />
+        )}
+        <Surveys site={site} />
+      </Box>
+    </Box>
+  );
+}
+
+interface SiteDetailsProps {
+  site?: Site;
+  selectedSurveyPointId?: string;
+  featuredSurveyId?: number | null;
+  surveys: SurveyListItem[];
+  featuredSurveyPoint?: SurveyPoint | null;
+  surveyDiveDate?: string | null;
+}
+
+export default SiteDetails;

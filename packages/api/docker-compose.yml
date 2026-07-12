@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  aqua-postgres:
+    image: kartoza/postgis:12.1
+    restart: always
+    ports:
+      - 54321:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: '!ChangeMe!'
+    volumes:
+      - ./db_data:/var/lib/postgresql
+
+  app:
+    build: .
+    volumes:
+      - ./data:/data/
+      - ../../tsconfig.json:/app/../../tsconfig.json

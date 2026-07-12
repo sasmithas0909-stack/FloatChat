@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Featured Media Card > should render with given state from Redux store 1`] = `
+<div>
+  <mock-card
+    classname="FeaturedMedia-card-1"
+  >
+    <div
+      class="FeaturedMedia-noVideoCardHeader-3"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-direction-xs-column css-1qhqgqb-MuiGrid-root"
+      >
+        <mock-typography
+          classname="FeaturedMedia-noVideoCardHeaderText-4"
+          variant="h5"
+        >
+          SURVEY TO BE UPLOADED
+        </mock-typography>
+      </div>
+    </div>
+    <div
+      class="FeaturedMedia-noVideoCardContent-5"
+    />
+  </mock-card>
+</div>
+`;

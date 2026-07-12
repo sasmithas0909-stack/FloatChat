@@ -1,0 +1,197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <form
+    class="Form-form-1"
+  >
+    <mock-typography
+      classname="Form-formTitle-2"
+      variant="h3"
+    >
+      Your Site
+    </mock-typography>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root Form-formField-3 Form-textField-6 css-cmpglg-MuiFormControl-root-MuiTextField-root"
+    >
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-4dh8ju-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input Mui-disabled Form-textField-6 css-p1pyuz-MuiInputBase-input-MuiOutlinedInput-input"
+          disabled=""
+          id=":r1:"
+          placeholder="Site Name e.g. 'Sombrero Site'"
+          type="text"
+          value="Mock Site"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-1nf2c5d-MuiNotchedOutlined-root"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <mock-typography
+      classname="Form-additionalInfo-4"
+    >
+      Please provide some additional information for each site:
+    </mock-typography>
+    <mock-typography>
+      Permitting
+    </mock-typography>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root Form-formField-3 Form-textField-6 css-cmpglg-MuiFormControl-root-MuiTextField-root"
+    >
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-haa1mn-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <textarea
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r2:"
+          name="permitRequirements"
+          placeholder="Please describe the permitting requirements. Please be sure to mention the authority having jurisdiction."
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-1nf2c5d-MuiNotchedOutlined-root"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <mock-typography>
+      Funding Source
+    </mock-typography>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root Form-formField-3 Form-textField-6 css-cmpglg-MuiFormControl-root-MuiTextField-root"
+    >
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-haa1mn-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <textarea
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r3:"
+          name="fundingSource"
+          placeholder="Funding source for import duties and shipping. Please describe the funding source for the import duties and shipping costs."
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-1nf2c5d-MuiNotchedOutlined-root"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <mock-typography>
+      Schedule for installation
+    </mock-typography>
+    <mock-typography
+      classname="Form-scheduleDescription-5"
+    >
+      What is the soonest date you could install the Smart Buoy and conduct a survey?
+    </mock-typography>
+    <mock-date-picker
+      classname="Form-formField-3"
+      closeonselect="true"
+      format="MM/dd/yyyy"
+      slotprops="[object Object]"
+    />
+    <mock-typography>
+      Installation, survey and maintenance personnel and equipment
+    </mock-typography>
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root Form-formField-3 Form-textField-6 css-cmpglg-MuiFormControl-root-MuiTextField-root"
+    >
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-haa1mn-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <textarea
+          aria-invalid="false"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r4:"
+          name="installationResources"
+          placeholder="Please provide a description of the people that will be able to conduct periodic surveys and maintenance of the buoy. Please also include a description of the equipment (e.g. a boat, cameras) that are available."
+          style="height: 0px; overflow: hidden;"
+        />
+        <textarea
+          aria-hidden="true"
+          class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline Form-textField-6 css-s43td4-MuiInputBase-input-MuiOutlinedInput-input"
+          readonly=""
+          style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+          tabindex="-1"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-1nf2c5d-MuiNotchedOutlined-root"
+          >
+            <span
+              aria-hidden="true"
+              class="notranslate"
+            >
+              ​
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-evxe5m-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;

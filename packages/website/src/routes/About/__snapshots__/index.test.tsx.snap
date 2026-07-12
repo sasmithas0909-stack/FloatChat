@@ -1,0 +1,1512 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`About > should render with given state from Redux store 1`] = `
+<div>
+  <mock-navbar
+    searchlocation="false"
+  />
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg About-root-1 css-5c1adp-MuiContainer-root"
+  >
+    <mock-box
+      classname="About-header-2"
+    >
+      <mock-typography
+        component="h1"
+        gutterbottom="true"
+        style="font-weight: 600;"
+        variant="h3"
+      >
+        Platform Features
+      </mock-typography>
+      <mock-typography
+        color="textSecondary"
+        style="font-weight: 300;"
+        variant="h6"
+      >
+        Explore the features and core architecture of AquaticAI
+      </mock-typography>
+    </mock-box>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-4z7gnm-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  01
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Interactive Global Map
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Displays monitoring locations across the world.
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Users can zoom, pan, and select locations.
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Shows sensor stations, coral reefs, and monitoring sites.
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Clicking a location opens detailed environmental information.
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Makes it easy to find and explore ocean monitoring sites.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  02
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Real-Time Environmental Monitoring
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Aqualink collects environmental information from sensors and satellites. It monitors:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Sea Surface Temperature (SST)
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Water Temperature
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Salinity
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    pH
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Dissolved Oxygen
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Turbidity
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Wind Speed
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Wave Height
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Helps users understand current ocean conditions.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  03
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Sensor Data Integration
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                The platform supports data from different marine sensors. Examples:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Temperature sensors
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Salinity sensors
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Water quality sensors
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Weather stations
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Ocean buoys
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    All sensor data is stored and displayed in one dashboard.
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Centralizes data from multiple monitoring devices.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  04
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Time-Series Graphs
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Users can view historical trends of environmental parameters. Examples:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Temperature over the last week
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Salinity over a month
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    pH changes over time
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Charts help identify increasing trends, seasonal changes, and sudden environmental events.
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Provides temporal analysis and change detection.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  05
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Coral Reef Monitoring
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Aqualink is designed to support coral reef conservation. It helps monitor:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Coral bleaching
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Reef health
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Heat stress
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Marine biodiversity
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Environmental changes affecting reefs
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Supports targeted reef preservation efforts.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  06
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Satellite Data Integration
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                The platform combines satellite observations with sensor measurements. Satellite information includes:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Sea Surface Temperature
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Chlorophyll concentration
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Heat stress indicators
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Ocean color
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Weather conditions
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Provides broader ocean coverage than local sensors alone.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  07
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Data Visualization Dashboard
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Users can easily compare different ocean parameters through a unified interface. The dashboard includes:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Interactive maps
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Line charts
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Trend graphs
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Environmental indicators
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Data tables
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Provides a holistic visual summary of environmental parameters.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  08
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Survey and Observation Management
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Researchers can create a historical record for future comparison:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Upload field observations
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Attach photographs
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Record notes
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Store survey results
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Document reef conditions
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Creates a rich historical archive of field surveys.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  09
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Data Management
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Empowers researchers to query and handle large datasets:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Store monitoring data
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Organize datasets
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Filter by location
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Search records
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Retrieve historical information
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Simplifies data archiving and querying.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  10
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                User-Friendly Interface
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Designed to be suitable for researchers, students, conservationists, and environmental organizations:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Responsive web interface
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Easy navigation
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Interactive controls
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Clear visualizations
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Simple workflows
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Lowers the barrier to entry for ocean data exploration.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  11
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Open-Source Platform
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                Aqualink is open source, allowing developers globally to:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Customize the platform
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Add new features
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Integrate additional sensors
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Build new applications
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Contribute improvements
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Encourages global collaboration and transparency.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 css-11l5t4l-MuiGrid-root"
+      >
+        <mock-card
+          classname="About-card-3"
+          elevation="0"
+        >
+          <mock-cardcontent
+            style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;"
+          >
+            <mock-box>
+              <mock-box
+                alignitems="center"
+                display="flex"
+                justifycontent="space-between"
+                mb="2"
+              >
+                <mock-typography
+                  classname="About-cardNumber-4"
+                >
+                  12
+                </mock-typography>
+              </mock-box>
+              <mock-typography
+                component="h2"
+                gutterbottom="true"
+                style="font-weight: 600;"
+                variant="h5"
+              >
+                Multi-Source Data Integration
+              </mock-typography>
+              <mock-typography
+                color="textSecondary"
+                style="margin-bottom: 0.75rem;"
+                variant="body2"
+              >
+                The platform combines data from various platforms to offer a comprehensive view of marine ecosystems:
+              </mock-typography>
+              <ul
+                style="padding-left: 1.2rem; margin: 0px;"
+              >
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Ocean sensors
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Weather stations
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Satellite observations
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Field surveys
+                  </mock-typography>
+                </li>
+                <li
+                  style="margin-bottom: 0.5rem;"
+                >
+                  <mock-typography
+                    variant="body2"
+                  >
+                    Historical databases
+                  </mock-typography>
+                </li>
+              </ul>
+            </mock-box>
+            <mock-box
+              classname="About-purposeBox-5"
+            >
+              <mock-typography
+                classname="About-purposeTitle-6"
+                variant="caption"
+              >
+                Purpose
+              </mock-typography>
+              <mock-typography
+                classname="About-purposeText-7"
+                variant="body2"
+              >
+                Provides a comprehensive and context-rich representation.
+              </mock-typography>
+            </mock-box>
+          </mock-cardcontent>
+        </mock-card>
+      </div>
+    </div>
+    <mock-box
+      mt="8"
+    >
+      <mock-typography
+        gutterbottom="true"
+        style="font-weight: 600; text-align: center;"
+        variant="h4"
+      >
+        Summary of Features
+      </mock-typography>
+      <mock-tablecontainer
+        classname="About-tableContainer-8"
+        component="[object Object]"
+        elevation="0"
+      >
+        <mock-table>
+          <mock-tablehead>
+            <mock-tablerow>
+              <mock-tablecell
+                classname="About-tableHeader-9"
+                style="font-weight: bold;"
+              >
+                Feature
+              </mock-tablecell>
+              <mock-tablecell
+                classname="About-tableHeader-9"
+                style="font-weight: bold;"
+              >
+                Purpose
+              </mock-tablecell>
+            </mock-tablerow>
+          </mock-tablehead>
+          <mock-tablebody>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Interactive Map
+              </mock-tablecell>
+              <mock-tablecell>
+                Explore monitoring sites
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Real-Time Monitoring
+              </mock-tablecell>
+              <mock-tablecell>
+                Display current ocean conditions
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Sensor Integration
+              </mock-tablecell>
+              <mock-tablecell>
+                Collect data from multiple devices
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Time-Series Charts
+              </mock-tablecell>
+              <mock-tablecell>
+                Analyze trends over time
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Coral Reef Monitoring
+              </mock-tablecell>
+              <mock-tablecell>
+                Assess reef health
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Satellite Integration
+              </mock-tablecell>
+              <mock-tablecell>
+                Add large-scale environmental data
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Dashboard
+              </mock-tablecell>
+              <mock-tablecell>
+                Visualize data with maps and charts
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Survey Management
+              </mock-tablecell>
+              <mock-tablecell>
+                Store observations and photos
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Data Management
+              </mock-tablecell>
+              <mock-tablecell>
+                Organize and retrieve datasets
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                User-Friendly Interface
+              </mock-tablecell>
+              <mock-tablecell>
+                Easy navigation and analysis
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: rgba(0, 0, 0, 0.02);"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Open Source
+              </mock-tablecell>
+              <mock-tablecell>
+                Extend and customize the platform
+              </mock-tablecell>
+            </mock-tablerow>
+            <mock-tablerow
+              style="background-color: transparent;"
+            >
+              <mock-tablecell
+                style="font-weight: 500;"
+              >
+                Multi-Source Data Integration
+              </mock-tablecell>
+              <mock-tablecell>
+                Combine data from sensors, satellites, and surveys
+              </mock-tablecell>
+            </mock-tablerow>
+          </mock-tablebody>
+        </mock-table>
+      </mock-tablecontainer>
+    </mock-box>
+  </div>
+</div>
+`;

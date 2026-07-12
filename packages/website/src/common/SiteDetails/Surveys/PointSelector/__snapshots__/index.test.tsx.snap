@@ -1,0 +1,66 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-1 MuiGrid-grid-md-12 MuiGrid-grid-lg-5 css-n47sv5-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item css-x7bhrq-MuiGrid-root"
+    >
+      <mock-typography
+        classname="makeStyles-subTitle-1"
+        variant="h6"
+      >
+        Survey Point:
+      </mock-typography>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item makeStyles-selectorWrapper-2 css-x7bhrq-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container css-1rp4aer-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item css-x7bhrq-MuiGrid-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary makeStyles-selector-3 MuiSelect-root css-rpel1k-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          >
+            <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-labelledby="survey-point survey-point"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1f2i9o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              id="survey-point"
+              role="combobox"
+              tabindex="0"
+            >
+              All
+            </div>
+            <input
+              aria-hidden="true"
+              aria-invalid="false"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+              name="survey-point"
+              tabindex="-1"
+              value="All"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              data-testid="ArrowDropDownIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

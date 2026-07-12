@@ -1,0 +1,371 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <mock-box
+    classname="makeStyles-card-1"
+  >
+    <mock-box
+      mb="2"
+    >
+      <mock-typography
+        color="textSecondary"
+        variant="h5"
+      >
+        Selected Site
+        <a
+          data-discover="true"
+          href="/sites/1"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-launchIcon-2 css-1umw9bq-MuiSvgIcon-root"
+            data-testid="LaunchIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+            />
+          </svg>
+        </a>
+      </mock-typography>
+    </mock-box>
+    <mock-card>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-cardWrapper-9 makeStyles-cardWrapper-21 css-1h90obp-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-10 makeStyles-cardAnalyticsWrapper-13 css-1nyv9pn-MuiGrid-root"
+        >
+          <mock-box
+            fontweight="400"
+            pb="0.5rem"
+            pl="0.5rem"
+            pt="1.5rem"
+          >
+            <mock-hidden
+              mddown="false"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1rp4aer-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item makeStyles-cardTitleWrapper-14 css-x7bhrq-MuiGrid-root"
+                >
+                  <mock-typography
+                    classname="makeStyles-cardTitle-15"
+                    color="textSecondary"
+                    variant="h5"
+                  >
+                    <span
+                      title="Hawaii"
+                    >
+                      Hawaii
+                    </span>
+                  </mock-typography>
+                </div>
+              </div>
+              <mock-typography
+                classname="makeStyles-cardTitle-15 makeStyles-siteRegionName-16"
+                color="textSecondary"
+                variant="h6"
+              >
+                <span
+                  title=""
+                />
+              </mock-typography>
+            </mock-hidden>
+            <mock-typography
+              color="textSecondary"
+              variant="caption"
+            >
+              DAILY SURFACE TEMP. (°C)
+            </mock-typography>
+          </mock-box>
+          <mock-hidden
+            mddown="true"
+          >
+            <div>
+              <mock-line
+                data="[object Object]"
+                options="[object Object]"
+              />
+            </div>
+          </mock-hidden>
+          <mock-hidden
+            mdup="true"
+          >
+            <mock-line
+              data="[object Object]"
+              options="[object Object]"
+            />
+          </mock-hidden>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-15vsh4j-MuiGrid-root"
+        >
+          <div
+            class="makeStyles-metricsContainer-17"
+          >
+            <div
+              class="makeStyles-metric-18"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                SURFACE TEMP
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                15.9
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   °C
+                </mock-typography>
+              </mock-typography>
+            </div>
+            <div
+              class="makeStyles-metric-18"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                HEAT STRESS
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                0.0
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   DHW
+                </mock-typography>
+              </mock-typography>
+            </div>
+            <div
+              class="makeStyles-metric-18"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                TEMP AT 0m
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                10.7
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   °C
+                </mock-typography>
+              </mock-typography>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mock-card>
+  </mock-box>
+</div>
+`;
+
+exports[`renders loading as expected 1`] = `
+<div>
+  <mock-box
+    classname="makeStyles-card-44"
+  >
+    <mock-box
+      mb="2"
+    >
+      <mock-typography
+        color="textSecondary"
+        variant="h5"
+      >
+        Selected Site
+        <a
+          data-discover="true"
+          href="/sites/1"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-launchIcon-45 css-1umw9bq-MuiSvgIcon-root"
+            data-testid="LaunchIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+            />
+          </svg>
+        </a>
+      </mock-typography>
+    </mock-box>
+    <mock-card>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-cardWrapper-52 makeStyles-cardWrapper-64 css-1h90obp-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-12 MuiGrid-grid-lg-10 makeStyles-cardAnalyticsWrapper-56 css-1nyv9pn-MuiGrid-root"
+        >
+          <mock-box
+            fontweight="400"
+            pb="0.5rem"
+            pl="0.5rem"
+            pt="1.5rem"
+          >
+            <mock-hidden
+              mddown="false"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-1rp4aer-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item makeStyles-cardTitleWrapper-57 css-x7bhrq-MuiGrid-root"
+                >
+                  <mock-typography
+                    classname="makeStyles-cardTitle-58"
+                    color="textSecondary"
+                    variant="h5"
+                  >
+                    <span
+                      title="Hawaii"
+                    >
+                      Hawaii
+                    </span>
+                  </mock-typography>
+                </div>
+              </div>
+              <mock-typography
+                classname="makeStyles-cardTitle-58 makeStyles-siteRegionName-59"
+                color="textSecondary"
+                variant="h6"
+              >
+                <span
+                  title=""
+                />
+              </mock-typography>
+            </mock-hidden>
+            <mock-typography
+              color="textSecondary"
+              variant="caption"
+            >
+              DAILY SURFACE TEMP. (°C)
+            </mock-typography>
+          </mock-box>
+          <mock-hidden
+            mddown="true"
+          >
+            <div>
+              <mock-line
+                data="[object Object]"
+                options="[object Object]"
+              />
+            </div>
+          </mock-hidden>
+          <mock-hidden
+            mdup="true"
+          >
+            <mock-line
+              data="[object Object]"
+              options="[object Object]"
+            />
+          </mock-hidden>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-2 css-15vsh4j-MuiGrid-root"
+        >
+          <div
+            class="makeStyles-metricsContainer-60"
+          >
+            <div
+              class="makeStyles-metric-61"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                SURFACE TEMP
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                15.9
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   °C
+                </mock-typography>
+              </mock-typography>
+            </div>
+            <div
+              class="makeStyles-metric-61"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                HEAT STRESS
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                0.0
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   DHW
+                </mock-typography>
+              </mock-typography>
+            </div>
+            <div
+              class="makeStyles-metric-61"
+            >
+              <mock-typography
+                color="textSecondary"
+                variant="caption"
+              >
+                TEMP AT 0m
+              </mock-typography>
+              <mock-typography
+                color="primary"
+                variant="h4"
+              >
+                10.7
+                 
+                <mock-typography
+                  component="span"
+                  variant="h6"
+                >
+                   °C
+                </mock-typography>
+              </mock-typography>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mock-card>
+  </mock-box>
+</div>
+`;

@@ -1,0 +1,190 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SiteInfo > should render with given state from Redux store 1`] = `
+<div>
+  <div
+    class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-hidden css-cwrbtg-MuiCollapse-root"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+    >
+      <div
+        class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorSuccess MuiAlert-standardSuccess MuiAlert-standard css-1v1cteu-MuiPaper-root-MuiAlert-root"
+          role="alert"
+          style="--Paper-shadow: none;"
+        >
+          <div
+            class="MuiAlert-icon css-vab54s-MuiAlert-icon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"
+              data-testid="SuccessOutlinedIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4C12.76,4 13.5,4.11 14.2, 4.31L15.77,2.74C14.61,2.26 13.34,2 12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0, 0 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiAlert-message css-zioonp-MuiAlert-message"
+          >
+            Something went wrong
+          </div>
+          <div
+            class="MuiAlert-action css-rgppqo-MuiAlert-action"
+          >
+            <mock-iconbutton
+              color="inherit"
+              size="small"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1ckov0h-MuiSvgIcon-root"
+                data-testid="CloseIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                />
+              </svg>
+            </mock-iconbutton>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-1k22pih-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z4k4cw-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-174grhv-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item SiteInfo-headerButtonWrapper-3 css-x7bhrq-MuiGrid-root"
+        >
+          <mock-iconbutton
+            aria-label="menu"
+            color="primary"
+            edge="start"
+            size="large"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+              data-testid="ArrowBackIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"
+              />
+            </svg>
+          </mock-iconbutton>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-1 SiteInfo-headerWrapper-4 css-1accxqv-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-1f6br5b-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z4k4cw-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-container css-eiox0h-MuiGrid-root"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-item SiteInfo-siteNameWrapper-5 css-x7bhrq-MuiGrid-root"
+                >
+                  <mock-typography
+                    variant="h4"
+                  >
+                    Hawaii
+                  </mock-typography>
+                </div>
+                <div
+                  class="MuiGrid-root MuiGrid-item SiteInfo-headerButtonWrapper-3 css-x7bhrq-MuiGrid-root"
+                >
+                  <mock-tooltip
+                    arrow="true"
+                    placement="top"
+                    title="Add to your dashboard"
+                  >
+                    <mock-iconbutton
+                      classname="CollectionButton-root-6"
+                      disabled="false"
+                      size="large"
+                    >
+                      <svg
+                        color="#0b8480"
+                      >
+                        watch.svg
+                      </svg>
+                    </mock-iconbutton>
+                  </mock-tooltip>
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z4k4cw-MuiGrid-root"
+            >
+              <mock-typography
+                variant="h6"
+              >
+                Managed by Some organization
+              </mock-typography>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z4k4cw-MuiGrid-root"
+            >
+              <mock-typography
+                variant="subtitle1"
+              >
+                Last surveyed: Sep 10, 2020
+              </mock-typography>
+            </div>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-spacing-xs-1 MuiGrid-direction-xs-column MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-3m2mgt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-x7bhrq-MuiGrid-root"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary SiteInfo-button-2 css-16a8qhd-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                EDIT SITE DETAILS
+              </button>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-x7bhrq-MuiGrid-root"
+            >
+              <a
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary SiteInfo-button-2 css-16a8qhd-MuiButtonBase-root-MuiButton-root"
+                data-discover="true"
+                href="/sites/1/upload_data"
+                tabindex="0"
+              >
+                UPLOAD DATA
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

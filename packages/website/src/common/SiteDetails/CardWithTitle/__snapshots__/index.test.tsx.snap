@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 css-wcmnoq-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 makeStyles-row-2 css-1d4pq44-MuiGrid-root"
+    >
+      <mock-box
+        classname="Title-root-11"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container css-eiox0h-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item css-x7bhrq-MuiGrid-root"
+            style="margin-right: 1rem;"
+          >
+            <mock-typography
+              classname=""
+              variant="h6"
+            >
+              Some value
+            </mock-typography>
+          </div>
+        </div>
+      </mock-box>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-z4k4cw-MuiGrid-root"
+    >
+      <div
+        class="makeStyles-container-3"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,66 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <div
+    class="Tooltip-tooltip-1"
+  >
+    <mock-card
+      classname="Tooltip-tooltipCard-2"
+    >
+      <div
+        class="MuiCardHeader-root Tooltip-tooltipHeader-3 css-149tc0y-MuiCardHeader-root"
+      >
+        <div
+          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-16xl4zq-MuiTypography-root"
+          >
+            <mock-typography
+              color="textPrimary"
+              style="white-space: nowrap;"
+              variant="caption"
+            >
+              12/20/20 07:19 AM UTC
+            </mock-typography>
+          </span>
+        </div>
+      </div>
+      <mock-cardcontent
+        classname="Tooltip-tooltipContent-4"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item css-9pwih8-MuiGrid-root"
+          style="height: 100%;"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-grid-xs-12 css-65pgqw-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-item Tooltip-tooltipContentItem-5 css-1f064cs-MuiGrid-root"
+            >
+              <div
+                class="div-root-8 div-root-9"
+                color="red"
+              />
+              <mock-typography
+                color="white"
+                variant="caption"
+              >
+                MOCK LOGGER
+                 
+                10.0 °C
+              </mock-typography>
+            </div>
+          </div>
+        </div>
+      </mock-cardcontent>
+    </mock-card>
+    <div
+      class="Tooltip-tooltipArrow-6"
+      style="border-color: rgb(9, 88, 119) transparent transparent transparent;"
+    />
+  </div>
+</div>
+`;

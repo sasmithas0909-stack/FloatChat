@@ -1,0 +1,392 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tracker > should render with given state from Redux store 1`] = `
+<div>
+  <mock-navbar
+    searchlocation="false"
+  />
+  <mock-box
+    classname="makeStyles-hero-2 makeStyles-hero-14"
+  >
+    <div
+      class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+      role="img"
+      style="background-image: url("/src/assets/img/tracker-page/hero.png");"
+    />
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg makeStyles-titleWrapper-5 css-5c1adp-MuiContainer-root"
+    >
+      <mock-typography
+        classname="makeStyles-heroTitle-3"
+        color="textPrimary"
+        variant="h1"
+      >
+        Tracking Heatwaves
+      </mock-typography>
+    </div>
+  </mock-box>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg makeStyles-root-1 css-5c1adp-MuiContainer-root"
+  >
+    <mock-box
+      margin="72px 0 48px 0"
+    >
+      <mock-typography
+        classname="makeStyles-title-6"
+        variant="h2"
+      >
+        Brazil Heatwave Tracking
+      </mock-typography>
+    </mock-box>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 makeStyles-globalStressWrapper-13 css-1oitsam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 MuiGrid-grid-lg-4 css-14sngiz-MuiGrid-root"
+      >
+        <mock-typography
+          variant="h6"
+        >
+          A large part of the Brazilian coastline is currently experiencing an extreme heatwave, which has as bleached up to 100% of the corals in some reefs. The heatwave has brought consistent temperatures above the bleaching threshold since February 2024, which is a very long time for corals. Temperature increases above the bleaching threshold for corals can result in bleaching, which will eventually kill the coral completely.
+          <br />
+          <br />
+          You can view an interactive collection of all the Brazilian sites
+           
+          <a
+            href="https://aqualink.org/collections/787"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            here
+          </a>
+          .
+          <br />
+          <br />
+           The image displays three surveys conducted at the
+           
+          <a
+            href="https://aqualink.org/sites/3331"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Tamandaré
+          </a>
+           
+          site, all taken at the same location and position. The first survey, conducted on February 22nd at the beginning of the heatwave, shows healthy coral. The second survey, conducted on March 26th in the middle of the heatwave, shows bleached corals. The final survey, conducted on May 25th, just after the heatwave, shows dead corals.
+          <br />
+          <br />
+          <a
+            href="https://highlights.aqualink.org/brazil-heatwave-tracking-live"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Track the Brazilian heatwave here
+          </a>
+        </mock-typography>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-xeq51w-MuiGrid-root"
+      >
+        <mock-card
+          classname="makeStyles-card3-9 makeStyles-card3-17"
+          variant="outlined"
+        >
+          <a
+            class="makeStyles-link-11"
+            href="https://highlights.aqualink.org/brazil-heatwave-tracking-live"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+              role="img"
+              style="background-image: url("/src/assets/img/tracker-page/Brazil.jpg");"
+            />
+          </a>
+        </mock-card>
+      </div>
+    </div>
+    <mock-box
+      margin="72px 0 48px 0"
+    >
+      <mock-typography
+        classname="makeStyles-title-6"
+        variant="h2"
+      >
+        Florida Heatwave Tracking
+      </mock-typography>
+    </mock-box>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1oitsam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-xeq51w-MuiGrid-root"
+      >
+        <mock-card
+          classname="makeStyles-card1-7 makeStyles-card1-15"
+          variant="outlined"
+        >
+          <a
+            class="makeStyles-link-11"
+            href="https://highlights.aqualink.org/florida-heatwave-tracking"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+              role="img"
+              style="background-image: url("/src/assets/img/tracker-page/image4.png");"
+            />
+          </a>
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 MuiGrid-grid-lg-4 css-14sngiz-MuiGrid-root"
+      >
+        <mock-typography
+          variant="h6"
+        >
+          Track the heatwave in Florida with Aqualink. Corals are very sensitive to temperature increases. An increase of just 1℃ can start a bleaching process, eventually killing the coral unless the temperature returns to normal. Aqualink is dedicated to sharing data and awareness publicly. On the
+           
+          <a
+            class="makeStyles-link-11"
+            href="https://highlights.aqualink.org/florida-heatwave-tracking"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Florida Heatwave Tracking page
+          </a>
+          , you can see this site's data, live stream, and the devastating effects the heatwave has had on the corals in the past couple of weeks.
+        </mock-typography>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container makeStyles-header-4 css-1lcgj00-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 MuiGrid-grid-md-9 css-tv0lng-MuiGrid-root"
+      >
+        <mock-typography
+          classname="makeStyles-title-6"
+        >
+          Using Sensor Networks to Monitor Heat Waves in Real-time
+        </mock-typography>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 makeStyles-footPrintImageWrapper-12 css-gkmjmc-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-1fb6z83-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item makeStyles-footPrintImageText-18 css-x7bhrq-MuiGrid-root"
+          >
+            <mock-typography
+              align="right"
+            >
+              Built with support from:
+            </mock-typography>
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-item makeStyles-footPrintImageLink-19 css-x7bhrq-MuiGrid-root"
+          >
+            <a
+              href="https://www.footprintcoalition.com/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                alt="footprint"
+                class="makeStyles-footPrintImage-20 makeStyles-footPrintImage-21"
+                src="/src/assets/img/tracker-page/footprint.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1oitsam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 MuiGrid-grid-lg-4 css-14sngiz-MuiGrid-root"
+      >
+        <mock-typography
+          variant="h6"
+        >
+          The ability for sensors to be grouped for a particular event, such as a Heatwave, or a particular region, is important for users to get critical information at a glance. We have launched a new feature called Dashboards where anyone can create a customized collection of sensors to track this information. For example, the
+          <a
+            class="makeStyles-link-11"
+            href="https://www.minderoo.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+             
+            Minderoo Foundation
+          </a>
+           
+          worked with us and the
+           
+          <a
+            class="makeStyles-link-11"
+            href="https://www.uwa.edu.au"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            University of Western Australila
+          </a>
+           
+          to deploy Smart Buoys along the Western coast of Australia. This was done in a critical time for the region where an extreme heatwave, known as the
+           
+          <a
+            class="makeStyles-link-11"
+            href="https://en.wikipedia.org/wiki/La_Ni%C3%B1a"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            La Nina
+          </a>
+          , was exptected to come through the area, potentially bringing devastating affects to the local ecosystems. They created a dashboard
+           
+          <a
+            class="makeStyles-link-11"
+            data-discover="true"
+            href="/collections/minderoo"
+          >
+            here
+          </a>
+           
+          that aggregrates all the sensors involved in tracking this event to get a real-time view of the severity. Scientists, media, and the general public can use this feature to get a holistic view of regional and event-based information, and we hope to enable a better understanding of how to protect the ecosystems during such times as the La Nina Heatwave.
+        </mock-typography>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-xeq51w-MuiGrid-root"
+      >
+        <mock-card
+          classname="makeStyles-card1-7 makeStyles-card1-15"
+          variant="outlined"
+        >
+          <a
+            href="/collections/minderoo"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div
+              class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+              role="img"
+              style="background-image: url("/src/assets/img/tracker-page/image1.png");"
+            />
+          </a>
+        </mock-card>
+      </div>
+    </div>
+    <mock-box
+      margin="72px 0 48px 0"
+    >
+      <mock-typography
+        classname="makeStyles-title-6"
+        variant="h2"
+      >
+        Create Your Dashboard
+      </mock-typography>
+    </mock-box>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-1oitsam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-xeq51w-MuiGrid-root"
+      >
+        <mock-card
+          classname="makeStyles-card2-8 makeStyles-card2-16"
+          variant="outlined"
+        >
+          <div
+            class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+            role="img"
+            style="background-image: url("/src/assets/img/tracker-page/image2.png");"
+          />
+        </mock-card>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 MuiGrid-grid-lg-4 css-14sngiz-MuiGrid-root"
+      >
+        <mock-typography
+          variant="h6"
+        >
+          To get started, head over to one of the sites you are interested in adding to your Dashboard. A bookmark icon will appear next to the site name in the heading. Clicking this will add the site. To remove it, simply click the bookmark icon again. Your dashboard page will aggregate all the sites that you add this way, and the name of the collection can be customized to reflect the region, event, or other interest.
+        </mock-typography>
+      </div>
+    </div>
+    <mock-box
+      margin="48px 0 72px 0"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-b4ocr5-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-9 css-12zv01i-MuiGrid-root"
+        >
+          <mock-typography
+            variant="h6"
+          >
+            We worked closely with the Minderoo Foundation to build this feature. The funding for the Heatwave Tracker development was provided by the FootPrint Coalition and we would like to thank them for their support.
+          </mock-typography>
+        </div>
+      </div>
+    </mock-box>
+    <mock-box
+      margin="72px 0 48px 0"
+    >
+      <mock-typography
+        classname="makeStyles-title-6"
+        variant="h2"
+      >
+        Track global heat stress at a glance
+      </mock-typography>
+    </mock-box>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 makeStyles-globalStressWrapper-13 css-1oitsam-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 MuiGrid-grid-lg-4 css-14sngiz-MuiGrid-root"
+      >
+        <mock-typography
+          variant="h6"
+        >
+          Aqualink has developed a tracker that highlights all the sites under the most stress, at a glance. Use
+           
+          <a
+            class="makeStyles-link-11"
+            data-discover="true"
+            href="/collections/heat-stress"
+          >
+            this page
+          </a>
+           
+          to see where the ocean is getting warmer and spot new heat waves.
+        </mock-typography>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7 MuiGrid-grid-lg-8 css-xeq51w-MuiGrid-root"
+      >
+        <mock-card
+          classname="makeStyles-card3-9 makeStyles-card3-17"
+          variant="outlined"
+        >
+          <a
+            data-discover="true"
+            href="/collections/heat-stress"
+          >
+            <div
+              class="MuiCardMedia-root makeStyles-image-10 css-utntyq-MuiCardMedia-root"
+              role="img"
+              style="background-image: url("/src/assets/img/tracker-page/image3.png");"
+            />
+          </a>
+        </mock-card>
+      </div>
+    </div>
+  </div>
+  <mock-footer />
+</div>
+`;

@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders as expected 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item makeStyles-chip-1 makeStyles-chip-7 css-x7bhrq-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-6zo1m7-MuiGrid-root"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary makeStyles-button-6 css-vsqhwv-MuiButtonBase-root-MuiButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="makeStyles-circle-3"
+        />
+        <mock-typography
+          classname="makeStyles-chipText-2"
+        >
+          LIVE
+        </mock-typography>
+      </button>
+    </div>
+  </div>
+</div>
+`;
