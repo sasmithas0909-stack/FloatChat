@@ -50,6 +50,7 @@ import Search from '../Search';
 import RouteButtons from '../RouteButtons';
 import MenuDrawer from '../MenuDrawer';
 import requests from '../../helpers/requests';
+import app from '../../firebase';
 
 function NavBar({
   searchLocation,
@@ -105,10 +106,10 @@ function NavBar({
       requests.axiosInstance.interceptors.response.use(
         (response) => response,
         async (error) => {
-          if ([401, 403].includes(error?.response?.status)) {
+          if (app && error?.response?.status === 401) {
             onUserSignOut();
             // temporarily log server errors here to investigate
-            // potential erroneous 403 errors.
+            // potential erroneous 401 errors.
             console.error(error);
             await new Promise((resolve) => {
               setTimeout(resolve, 0);

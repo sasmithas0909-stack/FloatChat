@@ -102,7 +102,9 @@ const getApiBaseUrl = () => {
     }
     return chatUrl;
   }
-  return 'http://localhost:8000';
+  return process.env.NODE_ENV === 'development'
+    ? 'http://localhost:8000'
+    : 'https://api-production-949b.up.railway.app';
 };
 
 const API_BASE_URL = getApiBaseUrl();
