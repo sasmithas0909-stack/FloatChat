@@ -3,6 +3,7 @@ import json
 import asyncio
 import random
 import re
+import openai
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,6 +13,28 @@ from dotenv import load_dotenv
 import data_store
 
 load_dotenv()
+
+# Initialize OpenAI client if key is present
+openai_api_key = os.environ.get("OPENAI_API_KEY")
+gemini_api_key = os.environ.get("GEMINI_API_KEY")
+gemini_model = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+
+client = None
+model_name = "gpt-4o-mini"
+
+if gemini_api_key:
+    # Use Gemini's OpenAI-compatible endpoint
+    client = openai.OpenAI(
+        api_key=gemini_api_key,
+        base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+    )
+    model_name = gemini_model
+elif openai_api_key:
+    # Use OpenAI API
+    client = openai.OpenAI(
+        api_key=openai_api_key
+    )
+    model_name = "gpt-4o-mini"
 
 app = FastAPI(title="FloatChat AI Backend", version="3.0.0")
 
@@ -721,6 +744,39 @@ Active global observation summary for **{metric_label}**:
     }
     return text, intent
 
+def process_chat_query_llm(user_message: str, history: list) -> tuple[str, dict]:
+    if not client:
+        raise ValueError("LLM client not initialized")
+        
+    response = client.chat.completions.create(
+        model=model_name,
+        messages=history,
+        temperature=0.7,
+    )
+    response_text = response.choices[0].message.content
+    
+    parts = response_text.split("[UI_INTENT]")
+    if len(parts) >= 2:
+        text = parts[0].strip()
+        intent_str = parts[1].strip()
+        try:
+            if intent_str.startswith("```"):
+                lines = intent_str.split("\n")
+                if lines[0].startswith("```"):
+                    lines = lines[1:]
+                if lines[-1].strip() == "```":
+                    lines = lines[:-1]
+                intent_str = "\n".join(lines).strip()
+            
+            intent = json.loads(intent_str)
+        except Exception:
+            intent = {"query_type": "general"}
+    else:
+        text = response_text.strip()
+        intent = {"query_type": "general"}
+        
+    return text, intent
+
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
     conversation_id = request.conversation_id
@@ -748,10 +804,17 @@ async def chat_endpoint(request: ChatRequest):
     async def event_generator():
         # Get raw response text and intent
         try:
-            text, intent = process_chat_query(user_message)
+            if client:
+                text, intent = process_chat_query_llm(user_message, CONVERSATIONS[conversation_id])
+            else:
+                text, intent = process_chat_query(user_message)
         except Exception as e:
-            text = f"An error occurred in local processing: {str(e)}"
-            intent = {"query_type": "general"}
+            # Fallback to local processing if LLM call fails
+            try:
+                text, intent = process_chat_query(user_message)
+            except Exception as e2:
+                text = f"An error occurred in local processing: {str(e2)}"
+                intent = {"query_type": "general"}
 
         # Simulate natural streaming by yielding chunks
         chunk_size = 8
