@@ -1,6 +1,8 @@
 # FloatChat
 AI-Powered Conversational Interface for ARGO Ocean Data Discovery and Visualization
 
+**🌐 Live Demo:** [aquatiaichat.netlify.app](https://aquatiaichat.netlify.app/)
+
 ## Description
 
 FloatChat is an AI-powered conversational interface for ARGO Ocean Data Discovery and Visualization.
